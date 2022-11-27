@@ -1,7 +1,19 @@
 {
     "routes": [
-        { "src": "/werss/(.*)", "dest": "https://cdn.werss.weapp.design/api/v1/feeds/$1"},
+        { 
+            "src": "/werss/(.*)", 
+            "dest": "https://cdn.werss.weapp.design/api/v1/feeds/$1"
+        },
         { "src": "/api/.*", "dest": "/api/vercel.js" },
         { "src": "/.*", "dest": "/api/vercel.js" }
+    ],
+    "headers": [
+        {
+            "source": "/about.js",
+            "headers": [{
+                "key": "Cache-Control",
+                "value": "s-maxage=60"
+            }]
+        }
     ]
 }
