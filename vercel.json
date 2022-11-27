@@ -1,6 +1,7 @@
 {
     "routes": [
         { "src": "/api/.*", "dest": "/api/vercel.js" },
-        { "src": "/.*", "dest": "/api/vercel.js" }
+        { "src": "/.*", "dest": "/api/vercel.js" },
+        {"src": "/werss/(.*)", "dest": "https://cdn.werss.weapp.design/api/v1/feeds/$1"}
     ]
 }
