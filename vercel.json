@@ -9,7 +9,7 @@
     ],
     "headers": [
         {
-            "source": "/about.js",
+            "source": "/werss/(.*)",
             "headers": [{
                 "key": "Cache-Control",
                 "value": "s-maxage=60"
