@@ -6,7 +6,7 @@
         },
         {
             "src": "/cdn/kjzg",
-            "dest" "https://us4.campaign-archive.com/feed?u=76a9486d851a664f357e250ab&id=ad48e23c1e"
+            "dest": "https://us4.campaign-archive.com/feed?u=76a9486d851a664f357e250ab&id=ad48e23c1e"
         },
         { "src": "/api/.*", "dest": "/api/vercel.js" },
         { "src": "/.*", "dest": "/api/vercel.js" }
