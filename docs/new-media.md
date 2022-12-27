@@ -245,19 +245,11 @@ pageClass: routes
 
 <Route author="nczitzk" example="/cgtn/pick" path="/cgtn/pick"/>
 
-## cnBeta
+## cnBeta.COM
 
-### 最新
+### 头条资讯
 
-<Route author="kt286 HaitianLiu nczitzk" example="/cnbeta" path="/cnbeta">
-
-::: tip 提示
-
-最新的内容来源于 [官方 RSS](https://www.cnbeta.com/backend.php)
-
-:::
-
-</Route>
+<Route author="kt286 HaitianLiu nczitzk" example="/cnbeta" path="/cnbeta" />
 
 ### 分类
 
@@ -275,7 +267,7 @@ pageClass: routes
 
 ::: tip 提示
 
-完整的主题列表参见 [主题列表](https://www.cnbeta.com/topics.htm)
+完整的主题列表参见 [主题列表](https://www.cnbeta.com.tw/topics.htm)
 
 :::
 
@@ -1430,6 +1422,18 @@ Provides all of the Thrillist articles with the specified tag.
 ### 版塊
 
 <Route author="nczitzk" example="/uwants/1520" path="/uwants/:fid" :paramsDesc="['fid，可在对应板块页的 URL 中找到']"/>
+
+## VERSE
+
+### 專文
+
+<Route author="miles170" example="/verse/articles" path="/verse/articles/:category?" :paramsDesc="['分类，见下表，默认为全部']" radar="1">
+
+| 新聞         | 人物     | 文化      | 觀念        | 地方    | 飲食     | 專題       |
+| ---------- | ------ | ------- | --------- | ----- | ------ | -------- |
+| verse-news | figure | culture | new-ideas | local | eating | features |
+
+</Route>
 
 ## VOA News
 
