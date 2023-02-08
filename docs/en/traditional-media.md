@@ -588,6 +588,10 @@ Language
 
 <RouteEn author="xyqfer" example="/economist/gre-vocabulary" path="/economist/gre-vocabulary" />
 
+### Global Business Review
+
+<Route author="prnake" example="/economist/global-business-review/cn-en" path="/economist/global-business-review/:language?" :paramsDesc="['Language, `en`, `cn`, `tw` are supported, support multiple options, default to cn-en']"  radar="1" rssbud="1"/>
+
 ### Download
 
 <RouteEn author="nczitzk" example="/economist/download" path="/economist/download" >
@@ -676,7 +680,7 @@ Provide full article RSS for WSJ topics.
 
 ### News
 
-<RouteEn author="KeiLongW" example="/yahoo-news/hk/world" path="/yahoo-news/:region/:category?" :paramsDesc="['Region','Category']">
+<RouteEn author="KeiLongW" example="/yahoo/news/hk/world" path="/yahoo/news/:region/:category?" :paramsDesc="['Region','Category']">
 
 `Region`
 | Hong Kong | Taiwan | US |

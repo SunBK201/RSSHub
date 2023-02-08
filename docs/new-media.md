@@ -273,6 +273,12 @@ pageClass: routes
 
 </Route>
 
+## CoinDesk Consensus Magazine
+
+### 新闻周刊
+
+<Route author="jameshih" example="/coindesk/consensus-magazine" path="/coindesk/consensus-magazine"/>
+
 ## Common App
 
 ### Blog
@@ -540,15 +546,15 @@ Country
 
 ## GQ
 
-### GQ 台湾
+### GQ Taiwan
 
-<Route author="nczitzk" example="/gq/tw/fashion" path="/gq/tw/:caty?/:subcaty?" :paramsDesc="['分类，见下表', '子分类，见下表']">
+<Route author="nczitzk" example="/gq/tw/fashion" path="/gq/tw/:caty?/:subcaty?" :paramsDesc="['分类，见下表', '子分类，见下表']" radar="1">
 
 分类
 
-| Fashion | Entertainment | Life | Gadget | Better Men | Video | Tag |
-| ------- | ------------- | ---- | ------ | ---------- | ----- | --- |
-| fashion | entertainment | life | gadget | bettermen  | video | tag |
+| Fashion | Shopping      | Entertainment | Life | Gadget | Better Men | Video | Tag |
+| ------- | ------------- | ------------- | ---- | ------ | ---------- | ----- | --- |
+| fashion | gq-recommends | entertainment | life | gadget | bettermen  | video | tag |
 
 子分类
 
@@ -560,39 +566,33 @@ Fashion
 
 Entertainment
 
-| 最新推薦 | 電影    | 娛樂         | 名人          | 美女   | 體育     | 特別報導    |
-| ---- | ----- | ---------- | ----------- | ---- | ------ | ------- |
-|      | movie | popculture | celebrities | girl | sports | special |
+| All topics | 電影    | 娛樂         | 名人          | 美女   | 體育     | 特別報導    |
+| ---------- | ----- | ---------- | ----------- | ---- | ------ | ------- |
+|            | movie | popculture | celebrities | girl | sports | special |
 
 Life
 
-| 最新推薦 | 美食   | 微醺   | 戶外生活    | 設計生活   | 風格幕後             | 特別報導    |
-| ---- | ---- | ---- | ------- | ------ | ---------------- | ------- |
-|      | food | wine | outdoor | design | lifestyleinsider | special |
+| All topics | 美食   | 微醺   | 戶外生活    | 設計生活   | 風格幕後             | 特別報導    |
+| ---------- | ---- | ---- | ------- | ------ | ---------------- | ------- |
+|            | food | wine | outdoor | design | lifestyleinsider | special |
 
 Gadget
 
-| 最新推薦 | 3C | 車    | 腕錶    | 特別報導    |
-| ---- | -- | ---- | ----- | ------- |
-|      | 3c | auto | watch | special |
+| All topics | 3C | 車    | 腕錶    | 特別報導    |
+| ---------- | -- | ---- | ----- | ------- |
+|            | 3c | auto | watch | special |
 
 Better Men
 
-| 最新推薦 | 保養健身      | 感情關係         | 性愛  | 特別報導    |
-| ---- | --------- | ------------ | --- | ------- |
-|      | wellbeing | relationship | sex | special |
-
-Video
-
-| 最新推薦 | 名人     | 全球娛樂                | 玩家收藏    | 穿搭    | 生活   |
-| ---- | ------ | ------------------- | ------- | ----- | ---- |
-|      | people | globalentertainment | collect | style | life |
+| All topics | 保養健身      | 感情關係         | 性愛  | 特別報導    |
+| ---------- | --------- | ------------ | --- | ------- |
+|            | wellbeing | relationship | sex | special |
 
 Tag
 
-| 奧斯卡                 |
-| ------------------- |
-| `the-oscars-奧斯卡金像獎` |
+| 奧斯卡                 | MOTY |
+| ------------------- | ---- |
+| `the-oscars-奧斯卡金像獎` | moty |
 
 </Route>
 
@@ -2266,7 +2266,7 @@ Type 栏目：
 
 ### 新闻
 
-<Route author="zoenglinghou" example="/google/news/要闻/hl=zh-CN&gl=CN&ceid=CN:zh-Hans" path="/google/news/:category/:locale" :paramsDesc="['子分类标题', '地区语言设置，在地址栏 `?` 后，包含 `hl`，`gl`，以及 `ceid` 参数']"/>
+<Route author="zoenglinghou" example="/google/news/焦点新闻/hl=zh-CN&gl=CN&ceid=CN:zh-Hans" path="/google/news/:category/:locale" :paramsDesc="['子分类标题', '地区语言设置，在地址栏 `?` 后，包含 `hl`，`gl`，以及 `ceid` 参数']"/>
 
 ## 观察者网
 
@@ -2323,6 +2323,12 @@ others = 热点新闻 + 滚动新闻
 ### 个人主页文章
 
 <Route author="Jeason0228" example="/guancha/personalpage/243983" path="/guancha/personalpage/:uid" :paramsDesc="['用户id， 可在URL中找到']" />
+
+## 观点网
+
+### 资讯
+
+<Route author="drgnchan" example="/guandian/finance" path="/guandian/:category" :paramsDesc="['资讯分类，可在URL中找到']" radar="1"/>
 
 ## 观海新闻
 
@@ -2857,6 +2863,16 @@ column 为 third 时可选的 category:
 
 </Route>
 
+## 链捕手 ChainCatcher
+
+### 首页
+
+<Route author="TonyRL" example="/chaincatcher" path="/chaincatcher"  radar="1" rssbud="1"/>
+
+### 快讯
+
+<Route author="TonyRL" example="/chaincatcher/news" path="/chaincatcher/news"  radar="1" rssbud="1"/>
+
 ## 链新闻 ABMedia
 
 ### 首页最新新闻
@@ -2945,11 +2961,11 @@ column 为 third 时可选的 category:
 
 ### 新闻快讯
 
-<Route author="Fatpandac" example="/blockbeats/flash" path="/blockbeats/:channel?" :paramsDesc="['类型，见下表，默认为快讯']">
+<Route author="Fatpandac jameshih" example="/blockbeats/newsflash" path="/blockbeats/:channel?" :paramsDesc="['类型，见下表，默认为快讯']">
 
-|   快讯  |  新闻  |
-| :---: | :--: |
-| flash | news |
+|     快讯    |    文章   |
+| :-------: | :-----: |
+| newsflash | article |
 
 </Route>
 
@@ -2996,6 +3012,18 @@ column 为 third 时可选的 category:
 | 最新 | 推薦 | 熱門 |
 | -- | -- | -- |
 | 1  | 2  | 3  |
+
+</Route>
+
+## 迈凯伦赛车
+
+### 文章
+
+<Route author="Bubbu0129" example="/mclaren/en/all" path="/mclaren/:lang/:category?" :paramsDesc="['支持英语(en)、简体中文(zh)、与西班牙语(es)。', '默认输出所有媒体(all)；见下表：']" radar="1" rssbud="1">
+
+| 所有媒体 | 文章      | 报道     | 图库      | 视频    | 博客   | 图文 (Photo Essay) |
+| ---- | ------- | ------ | ------- | ----- | ---- | ---------------- |
+| all  | article | report | gallery | video | blog | photo_essay      |
 
 </Route>
 
@@ -3385,23 +3413,35 @@ column 为 third 时可选的 category:
 
 ### 热门文章
 
-<Route author="WenryXu" example="/woshipm/popular" path="/woshipm/popular"/>
+<Route author="WenryXu" example="/woshipm/popular" path="/woshipm/popular/:range?" :paramsDesc="['时间，见下表，默认为 `daily`']" radar="1">
+
+| 日榜    | 周榜     | 月榜      |
+| ----- | ------ | ------- |
+| daily | weekly | monthly |
+
+</Route>
 
 ### 天天问
 
-<Route author="WenryXu" example="/woshipm/wen" path="/woshipm/wen"/>
+<Route author="WenryXu" example="/woshipm/wen" path="/woshipm/wen" radar="1"/>
 
 ### 用户收藏
 
-<Route author="LogicJake" example="/woshipm/bookmarks/324696" path="/woshipm/bookmarks/:id" :paramsDesc="['用户 id']"/>
+<Route author="LogicJake" example="/woshipm/bookmarks/324696" path="/woshipm/bookmarks/:id" :paramsDesc="['用户 id']" radar="1"/>
 
 ### 用户文章
 
-<Route author="LogicJake" example="/woshipm/user_article/324696" path="/woshipm/user_article/:id" :paramsDesc="['用户 id']"/>
+<Route author="LogicJake" example="/woshipm/user_article/324696" path="/woshipm/user_article/:id" :paramsDesc="['用户 id']" radar="1"/>
 
 ### 最新文章
 
-<Route author="Director-0428" example="/woshipm/latest" path="/woshipm/latest"/>
+<Route author="Director-0428" example="/woshipm/latest" path="/woshipm/latest" radar="1"/>
+
+## 人人都是自媒体
+
+### 发现
+
+<Route author="Joey" example="/iiilab" path="/iiilab" radar="1" />
 
 ## 软餐
 
@@ -3411,15 +3451,15 @@ column 为 third 时可选的 category:
 
 ### 分类
 
-<Route author="nczitzk" example="/ruancan/sort/news" path="/ruancan/sort/:sort" :paramsDesc="['分类 id，可在对应分类页 URL 中找到']"/>
-
-### 标签
-
-<Route author="nczitzk" example="/ruancan/tag/oxygenos" path="/ruancan/tag/:tag" :paramsDesc="['标签 id，可在对应标签页 URL 中找到']"/>
+<Route author="nczitzk" example="/ruancan/category/news" path="/ruancan/category/:category?" :paramsDesc="['分类 id，可在对应分类页 URL 中找到，默认为业界']"/>
 
 ### 搜索
 
-<Route author="nczitzk" example="/ruancan/search/ColorOS" path="/ruancan/search/:keyword?" :paramsDesc="['关键字，默认为空']"/>
+<Route author="nczitzk" example="/ruancan/search/Windows" path="/ruancan/search/:keyword?" :paramsDesc="['关键字，默认为空']"/>
+
+### 用户文章
+
+<Route author="nczitzk" example="/ruancan/user/72" path="/ruancan/user/:id?" :paramsDesc="['用户 id，可在对应用户页 URL 中找到']"/>
 
 ## 上下游 News\&Market
 
@@ -3866,13 +3906,13 @@ column 为 third 时可选的 category:
 
 :::
 
-### 公众号（wemp.app 来源）
-
-<Route author="HenryQW" example="/wechat/wemp/36836fbe-bdec-4758-8967-7cc82722952d" path="/wechat/wemp/:id" :paramsDesc="['wemp 公众号 id, 可在搜索引擎使用 `site:wemp.app` 搜索公众号（例如: 人民日报 site:wemp.app), 打开公众号页, 在 URL 中找到 id']" anticrawler="1"/>
-
 ### 公众号（CareerEngine 来源）
 
 <Route author="HenryQW" example="/wechat/ce/595a5b14d7164e53908f1606" path="/wechat/ce/:id" :paramsDesc="['公众号 id, 在 [CareerEngine](https://search.careerengine.us/) 搜索公众号，通过 URL 中找到对应的公众号 id']" anticrawler="1"/>
+
+### 公众号（二十次幂来源）
+
+<Route author="sanmmm" example="/wechat/ershicimi/813oxJOl" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']" anticrawler="1"/>
 
 ### 公众号（Telegram 频道来源）
 
@@ -3898,48 +3938,9 @@ column 为 third 时可选的 category:
 
 </Route>
 
-### 公众号（优读来源）
-
-<Route author="kt286" example="/wechat/uread/shensing" path="/wechat/uread/:userid" :paramsDesc="['公众号的微信号, 可在 微信-公众号-更多资料 中找到。并不是所有的都支持，能不能用随缘']"/>
-
-### 公众号（二十次幂来源）
-
-<Route author="sanmmm" example="/wechat/ershicimi/813oxJOl" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']" anticrawler="1"/>
-
-### 公众号（微阅读来源）
-
-<Route author="Rongronggg9" example="/wechat/data258/gh_cbbad4c1d33c" path="/data258/:id?" :paramsDesc="['公众号 id 或分类 id，可在公众号页或分类页 URL 中找到；若略去，则抓取首页']" anticrawler="1" radar="1" rssbud="1" selfhost="1">
-
-::: warning 注意
-
-由于使用了一些针对反爬的缓解措施，本路由响应较慢。默认只抓取前 5 条，可通过 `?limit=` 改变（不推荐，容易被反爬）。\
-该网站使用 IP 甄别访客，且应用严格的每日阅读量限额（约 15 次），请自建并确保正确配置缓存；如使用内存缓存而非 Redis 缓存，请增大缓存容量。该限额足够订阅至少 3 个公众号 (假设公众号每日仅更新一次)；首页 / 分类页更新相当频繁，不推荐订阅。
-
-:::
-
-</Route>
-
-### 公众号（wxnmh.com 来源）
-
-<Route author="laampui" example="/wechat/wxnmh/51798" path="/wechat/wxnmh/:id" :paramsDesc="['公众号 id, 打开 wxnmh.com, 在 URL 中找到 id']" anticrawler="1"/>
-
-### 公众号（wechat-feeds 来源）
-
-::: warning 注意
-
-wechat-feeds 来源[已停止更新](https://github.com/hellodword/wechat-feeds/issues/3882)，历史文章可以正常订阅阅读
-
-:::
-
-<Route author="tylinux" example="/wechat/feeds/MzIwMzAwMzQxNw==" path="/wechat/feeds/:id" :paramsDesc="['公众号 id, 打开 `https://wechat.privacyhide.com/`, 在选定公众号的订阅 URL 中找到 id, 不包含最后的 .xml']"/>
-
-### 公众号（feeddd 来源)）
+### 公众号（feeddd 来源）
 
 <Route author="TonyRL Rongronggg9" example="/wechat/feeddd/6131e1441269c358aa0e2141" path="/wechat/feeddd/:id" :paramsDesc="['公众号 id, 打开 `https://feeddd.org/feeds` 或 `https://cdn.jsdelivr.net/gh/feeddd/feeds/feeds_all_rss.txt`, 在 URL 中找到 id; 注意不是公众号页的 id, 而是订阅的 id']"/>
-
-### 公众号（公众号 360 来源）
-
-见 [#公众号 360](#gong-zhong-hao-360)
 
 ### 公众号（自由微信来源）
 
@@ -3960,6 +3961,41 @@ wechat-feeds 来源[已停止更新](https://github.com/hellodword/wechat-feeds/
 <Route author="MisteryMonster" example="/wechat/mp/msgalbum/MzA3MDM3NjE5NQ==/1375870284640911361" path="/wechat/mp/msgalbum/:biz/:aid" :paramsDesc="['公众号id', 'Tag id', ]" radar="1" rssbud="1" anticrawler="1">
 
 一些公众号（如看理想）会在微信文章里添加 Tag ，点入 Tag 的链接如 <https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3MDM3NjE5NQ==&action=getalbum&album_id=1375870284640911361>，其中`biz` 为 `MzA3MDM3NjE5NQ==`，`aid` 为 `1375870284640911361`。
+
+</Route>
+
+### 公众号（优读来源）
+
+<Route author="kt286" example="/wechat/uread/shensing" path="/wechat/uread/:userid" :paramsDesc="['公众号的微信号, 可在 微信-公众号-更多资料 中找到。并不是所有的都支持，能不能用随缘']"/>
+
+### 公众号（wxnmh.com 来源）
+
+<Route author="laampui" example="/wechat/wxnmh/51798" path="/wechat/wxnmh/:id" :paramsDesc="['公众号 id, 打开 wxnmh.com, 在 URL 中找到 id']" anticrawler="1"/>
+
+### 公众号（wechat-feeds 来源）
+
+::: warning 注意
+
+wechat-feeds 来源[已停止更新](https://github.com/hellodword/wechat-feeds/issues/3882)，历史文章可以正常订阅阅读
+
+:::
+
+<Route author="tylinux" example="/wechat/feeds/MzIwMzAwMzQxNw==" path="/wechat/feeds/:id" :paramsDesc="['公众号 id, 打开 `https://wechat.privacyhide.com/`, 在选定公众号的订阅 URL 中找到 id, 不包含最后的 .xml']"/>
+
+### 公众号（公众号 360 来源）
+
+见 [#公众号 360](#gong-zhong-hao-360)
+
+### 公众号（微阅读来源）
+
+<Route author="Rongronggg9" example="/wechat/data258/gh_cbbad4c1d33c" path="/data258/:id?" :paramsDesc="['公众号 id 或分类 id，可在公众号页或分类页 URL 中找到；若略去，则抓取首页']" anticrawler="1" radar="1" rssbud="1" selfhost="1">
+
+::: warning 注意
+
+由于使用了一些针对反爬的缓解措施，本路由响应较慢。默认只抓取前 5 条，可通过 `?limit=` 改变（不推荐，容易被反爬）。\
+该网站使用 IP 甄别访客，且应用严格的每日阅读量限额（约 15 次），请自建并确保正确配置缓存；如使用内存缓存而非 Redis 缓存，请增大缓存容量。该限额足够订阅至少 3 个公众号 (假设公众号每日仅更新一次)；首页 / 分类页更新相当频繁，不推荐订阅。
+
+:::
 
 </Route>
 
@@ -4177,7 +4213,9 @@ wechat-feeds 来源[已停止更新](https://github.com/hellodword/wechat-feeds/
 
 ## 小刀娱乐网
 
-<Route author="nczitzk" example="/x6d/34" path="/x6d/:id?" :paramsDesc="['分类 id，可在对应分类页面的 URL 中找到，默认为首页最近更新']">
+### 分类
+
+<Route author="nczitzk" example="/x6d/34" path="/x6d/:id?" :paramsDesc="['分类 id，可在对应分类页面的 URL 中找到，默认为首页最近更新']" radar="1">
 
 | 技巧分享 | QQ 技巧 | 微信技巧 | 其他教程 | 其他分享 |
 | ---- | ----- | ---- | ---- | ---- |
@@ -4372,6 +4410,16 @@ wechat-feeds 来源[已停止更新](https://github.com/hellodword/wechat-feeds/
 ### 微语简报
 
 <Route author="x2009again" example="/yunspe/newsflash" path="/yunspe/newsflash" />
+
+## 知园
+
+### Newsletter
+
+<Route author="TonyRL" example="/zhiy/letters/messy" path="/zhiy/letters/:author" :paramsDesc="['作者 ID，可在URL中找到']" radar="1" rssbud="1"/>
+
+### 笔记
+
+<Route author="TonyRL" example="/zhiy/posts/long" path="/zhiy/posts/:author" :paramsDesc="['作者 ID，可在URL中找到']" radar="1" rssbud="1"/>
 
 ## 中国纺织经济信息网
 
@@ -4597,6 +4645,16 @@ QueryString:
 |      | zh-hk | zh-tw |
 
 </Route>
+
+## 字节点击
+
+### 首页
+
+<Route author="TonyRL" example="/byteclicks" path="/byteclicks" radar="1" />
+
+### 标签
+
+<Route author="TonyRL" example="/byteclicks/tag/人工智能" path="/byteclicks/tag/:tag" radar="1" :paramsDesc="['标签，可在URL中找到']"/>
 
 ## 自由微信
 
