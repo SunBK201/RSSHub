@@ -12,7 +12,7 @@
         {
             "src": "/cdn/freebuf",
             "dest": "https://www.freebuf.com/feed"
-        }
+        },
         {
             "src": "/api/.*",
             "dest": "/api/vercel.js"
