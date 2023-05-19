@@ -4,6 +4,20 @@ pageClass: routes
 
 # Uncategorized
 
+## 591 Rental house
+
+### Rental house
+
+<RouteEn author="Yukaii" example="/591/tw/rent/order=posttime&orderType=desc" path="/591/:country/rent/:query?" :paramsDesc="['Country code. Only tw is supported now', 'Query Parameters']">
+
+::: tip Tip
+
+Copy the URL of the 591 filter housing page and remove the front part "https://rent.591.com.tw/?", you will get the query parameters.
+
+:::
+
+</RouteEn>
+
 ## Apple
 
 ### Exchange and Repair Extension Programs
@@ -112,6 +126,18 @@ Official Website: <https://news.yahoo.co.jp/pages/article/20200207>
 
 <RouteEn author="LogicJake" example="/instapaper/person/viridiano" path="/instapaper/person"/>
 
+## Instructables
+
+### Projects
+
+<RouteEn author="wolfg1969" example="/instructables/projects/circuits" path="/instructables/projects/:category?" :paramsDesc="['Category, empty by default, can be found in URL or see the table below']" radar="1">
+
+| All | Circuits | Workshop | Craft | Cooking | Living | Outside | Teachers |
+| --- | -------- | -------- | ----- | ------- | ------ | ------- | -------- |
+|     | circuits | workshop | craft | cooking | living | outside | teachers |
+
+</RouteEn>
+
 ## Japanpost
 
 ### Track & Trace Service
@@ -200,6 +226,12 @@ For example:
 
 </RouteEn>
 
+## oshwhub
+
+### OpenSource Square
+
+<RouteEn author="tylinux" example="/oshwhub" path="/oshwhub/:sortType?" :paramsDesc="['sortType']" radar="1" rssbud="1"/>
+
 ## Panda
 
 ### Feeds
@@ -272,6 +304,18 @@ Data Source: [trending-in-one](https://github.com/huqi-pr/trending-in-one)
 Board and Build can be found in [here](http://api.ineal.me/tss/status)
 
 </RouteEn>
+
+## Urban Dictionary
+
+### Random words
+
+<RouteEn author="TonyRL" example="/urbandictionary/random" path="/urbandictionary/random" radar="1" rssbud="1"/>
+
+## WFDF
+
+### News
+
+<RouteEn author="HankChow" example="/wfdf/news" path="/wfdf/news" radar="1"/>
 
 ## wikiHow
 
